@@ -1,0 +1,30 @@
+/*                           last update 03-04-2006                           */
+/*                                                                            */
+/*                                                                            */
+/*                                                                            */
+/*                                                                            */
+/* LET OP ONDER SUZE LINUX GAAT BV HET VOLGENDE NIET GOED                     */
+/*                                                                            */
+/*             *max_energy = atof(TSA_spectrum[k][m][v]);                     */
+/*                                                                            */
+/* DIT VERANDEREN IN:                                                         */
+/*                                                                            */
+/*             sscanf(TSA_spectrum[k][m][v], "%le", &hulp_spectrum_waarde);   */
+/*             *max_energy = hulp_spectrum_waarde;                            */
+
+
+
+
+- 10-01-2007 - bij ruis check voor richting [file: gps_input.c] ] werd er gewerkt met een Epiek bepaling
+               dit werd daar ten onrechte als fp gelabeld (dus fp vanaf nu Epiek_hulp)
+               NB Verder geen inhoudelijke consequenties (fp zelf werd goed opgeslagen in SPECTRUM)
+- 21-03-2010 - Q1(Q11/Q12), BG2 en A12 (A121/A122) toegevoegd voor cic
+             - A12 nedwam gridpunt toegevoegd
+- 30-03-2010 - Function Convert_nedwam_coordinaten_to_station() [gps_nedwam_tsa_input.c] aangepast voor beter Schier
+               corresponderent nedwam gridpint (oud: 54,00N 6,50E; new: 53,67N 6,00E) zie ook tma_info.txt en tsf_info.txt
+               (/nobackup/users/stam/GPS_1_1/input_nedwam)
+               NB Schiermonnikoog cic meetpunt: 53-35-41,4N 6-09-55.4E(gr-min-sec) of wel 53,59N 6,17E (gr)
+
+
+- 15-04-2013 - gps_nedwam_tma_input.c aangepast voor andere output van TSF_2_REALS (ivm 64 bit aangepast door J. Hozee)
+- 15-04-2013 - gps_nedwam_polair_ps.c aangepast voor warnings (#include <string.h> toegevoegd>

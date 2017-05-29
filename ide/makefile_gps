@@ -1,0 +1,58 @@
+#
+# 
+# laatst gewijzigd : 22-06-2004
+#
+# let op: TAB's gebruiken bij cc regels !!!
+#
+
+gps_new.exe: gps_main.o gps_ps.o gps_input.o gps_nedwam_tma_input.o gps_nedwam_tsa_input.o gps_nedwam_compute.o gps_nedwam_ps.o gps_hirlam_input.o gps_html.o gps_nedwam_polair_ps.o gps_dsp_input.o gps_dsp_polair_ps.o gps_hirlam_uba_input.o gps_nedwam_tma_uba_ps.o gps_cid_input.o gps_hwa_input.o
+	cc -o gps_new.exe gps_main.o gps_ps.o gps_input.o gps_nedwam_tma_input.o gps_nedwam_tsa_input.o gps_nedwam_compute.o gps_nedwam_ps.o gps_hirlam_input.o gps_html.o gps_nedwam_polair_ps.o gps_dsp_input.o gps_dsp_polair_ps.o gps_hirlam_uba_input.o gps_nedwam_tma_uba_ps.o gps_cid_input.o gps_hwa_input.o /usr/lib/libm.a
+
+gps_main.o: gps_main.c
+	cc -c -verbose gps_main.c
+
+gps_ps.o: gps_ps.c
+	cc -c -verbose gps_ps.c	
+
+gps_input.o: gps_input.c
+	cc -c -verbose gps_input.c	
+
+gps_nedwam_tma_input.o: gps_nedwam_tma_input.c
+	cc -c -verbose gps_nedwam_tma_input.c
+
+gps_nedwam_tsa_input.o: gps_nedwam_tsa_input.c
+	cc -c -verbose gps_nedwam_tsa_input.c
+
+gps_nedwam_compute.o: gps_nedwam_compute.c
+	cc -c -verbose gps_nedwam_compute.c
+
+gps_nedwam_ps.o: gps_nedwam_ps.c
+	cc -c -verbose gps_nedwam_ps.c
+
+gps_hirlam_input.o: gps_hirlam_input.c
+	cc -c -verbose gps_hirlam_input.c
+
+gps_html.o: gps_html.c
+	cc -c -verbose gps_html.c
+
+gps_nedwam_polair_ps.o: gps_nedwam_polair_ps.c
+	cc -c -verbose gps_nedwam_polair_ps.c
+
+gps_dsp_polair_ps.o: gps_dsp_polair_ps.c
+	cc -c -verbose gps_dsp_polair_ps.c
+
+gps_dsp_input.o: gps_dsp_input.c
+	cc -c -verbose gps_dsp_input.c
+
+gps_hirlam_uba_input.o: gps_hirlam_uba_input.c
+	cc -c -verbose gps_hirlam_uba_input.c
+
+gps_nedwam_tma_uba_ps.o: gps_nedwam_tma_uba_ps.c
+	cc -c -verbose gps_nedwam_tma_uba_ps.c
+
+gps_cid_input.o: gps_cid_input.c
+	cc -c -verbose gps_cid_input.c
+
+gps_hwa_input.o: gps_cid_input.c
+	cc -c -verbose gps_hwa_input.c
+

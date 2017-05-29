@@ -1,0 +1,120 @@
+#
+#mi hh dd mm wkd command ('bdawo8', 04-10-2005 08z)
+#
+
+
+#
+# Spectra
+#
+#36 *       * * * launch_spectra SPECTRA/get_wind_data.sc
+5  *       * * * launch_spectra SPECTRA/spectra_control.sc 2
+37 *       * * * launch_spectra SPECTRA/spectra_control.sc 1
+
+
+
+#
+# AMDAR
+#
+#00 *      * * * launch AMDAR/get_amdar_data.sc
+
+
+#
+# UVS (Uniform verificatie Systeem)
+#
+#01 0      * * * launch_uvs EPS_WAM/eps_wam.sc
+15 0      * * * launch_uvs KTG/ktg_backup.sc
+#12 1      * * * launch_uvs HIRLAM/moene.sc
+27 1      * * * launch_uvs KLIM/klim.sc
+42 1      * * * launch_uvs ALL_SYNOPS/getsynopdata.sc
+#20 2      * * * launch_uvs CIC_RTWNDB/get_cic_data.sc
+#12 3      * * * launch_uvs HIRLAM/moene_x.sc
+01 7      * * * launch_uvs MMD_PRINTER/mmd_printer.sc
+15 7      * * * launch_uvs mail.sc
+28 15     1 * * launch_uvs mail.sc
+50 11     * * * launch_uvs NEDWAM_ASIMEXTR/asimextr_nedwam.sc
+31 *      * * * launch_uvs CIC_RTWNDB/get_cic_data.sc
+
+
+#
+# GPS (Golven Presentatie Systeem)
+#
+43 0      * * * launch_gps GPS/gps_nedwam_update_6_control.sc
+46 0      * * * launch_gps GPS/gps_par_update_6_control.sc
+44 1      * * * launch_gps GPS/gps_par_update_7_control.sc
+44 2      * * * launch_gps GPS/gps_par_update_8_control.sc
+35 3      * * * launch_gps GPS/gps_nedwam_control.sc
+38 3      * * * launch_gps GPS/gps_par_control.sc
+43 3      * * * launch_gps GPS/gps_nedwam_update_3_control.sc
+46 3      * * * launch_gps GPS/gps_par_update_3_control.sc
+59 3      * * * launch_gps GPS/gps_nedwam_verif_control.sc
+31 4      * * * launch_gps GPS/gps_nedwam_retry_control.sc
+34 4      * * * launch_gps GPS/gps_par_retry_control.sc
+44 4      * * * launch_gps GPS/gps_par_update_4_control.sc
+31 5      * * * launch_gps GPS/gps_nedwam_tweede_retry_control.sc
+34 5      * * * launch_gps GPS/gps_par_tweede_retry_control.sc
+44 5      * * * launch_gps GPS/gps_par_update_5_control.sc
+43 6      * * * launch_gps GPS/gps_nedwam_update_6_control.sc
+46 6      * * * launch_gps GPS/gps_par_update_6_control.sc
+44 7      * * * launch_gps GPS/gps_par_update_7_control.sc
+44 8      * * * launch_gps GPS/gps_par_update_8_control.sc
+36 9      * * * launch_gps GPS/gps_nedwam_control.sc
+38 9      * * * launch_gps GPS/gps_par_control.sc
+43 9      * * * launch_gps GPS/gps_nedwam_update_3_control.sc
+46 9      * * * launch_gps GPS/gps_par_update_3_control.sc
+59 9      * * * launch_gps GPS/gps_nedwam_verif_control.sc
+31 10     * * * launch_gps GPS/gps_nedwam_retry_control.sc
+34 10     * * * launch_gps GPS/gps_par_retry_control.sc
+44 10     * * * launch_gps GPS/gps_par_update_4_control.sc
+44 11     * * * launch_gps GPS/gps_par_update_5_control.sc
+43 12     * * * launch_gps GPS/gps_nedwam_update_6_control.sc
+46 12     * * * launch_gps GPS/gps_par_update_6_control.sc
+44 13     * * * launch_gps GPS/gps_par_update_7_control.sc
+44 14     * * * launch_gps GPS/gps_par_update_8_control.sc
+35 15     * * * launch_gps GPS/gps_nedwam_control.sc
+38 15     * * * launch_gps GPS/gps_par_control.sc
+43 15     * * * launch_gps GPS/gps_nedwam_update_3_control.sc
+46 15     * * * launch_gps GPS/gps_par_update_3_control.sc
+59 15     * * * launch_gps GPS/gps_nedwam_verif_control.sc
+31 16     * * * launch_gps GPS/gps_nedwam_retry_control.sc
+34 16     * * * launch_gps GPS/gps_par_retry_control.sc
+44 16     * * * launch_gps GPS/gps_par_update_4_control.sc
+44 17     * * * launch_gps GPS/gps_par_update_5_control.sc
+43 18     * * * launch_gps GPS/gps_nedwam_update_6_control.sc
+46 18     * * * launch_gps GPS/gps_par_update_6_control.sc
+44 19     * * * launch_gps GPS/gps_par_update_7_control.sc
+44 20     * * * launch_gps GPS/gps_par_update_8_control.sc
+35 21     * * * launch_gps GPS/gps_nedwam_control.sc
+38 21     * * * launch_gps GPS/gps_par_control.sc
+43 21     * * * launch_gps GPS/gps_nedwam_update_3_control.sc
+46 21     * * * launch_gps GPS/gps_par_update_3_control.sc
+59 21     * * * launch_gps GPS/gps_nedwam_verif_control.sc
+31 22     * * * launch_gps GPS/gps_nedwam_retry_control.sc
+34 22     * * * launch_gps GPS/gps_par_retry_control.sc
+44 22     * * * launch_gps GPS/gps_par_update_4_control.sc
+44 23     * * * launch_gps GPS/gps_par_update_5_control.sc
+39 *      * * * launch_gps GPS/gps_cic_control.sc
+40 *      * * * launch_gps GPS/gps_dsp_control.sc
+
+
+#
+# VOS (Voluntary Observing Ships) + PLATS
+#
+00 3      * * * launch_vos SPS/sps_ship_data.sc
+25 3      * * * launch_vos PLAT/get_plat_data.sc
+40 3      * * * launch_vos mail_plat.sc
+25 4      * * * launch_vos SHIP/get_ship_data.sc
+36 4      * * * launch_vos mail_ship.sc
+00 *      * * * launch_vos SPS/sps_plat_data.sc
+
+
+#
+# ALGEMEEN
+#
+03 7      * * * launch_general mail_cron_logs.sc
+05 7      * * * launch_general clear_cron_logs.sc
+
+
+
+#
+# n.b. na veranderen crtab niet vergeten crontab crtab commando te geven !
+################################################################################
